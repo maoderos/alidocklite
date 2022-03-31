@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 WORKDIR /home/alidocklite
 
@@ -12,8 +12,8 @@ RUN apt-get install -y curl libcurl4-gnutls-dev build-essential gfortran libmysq
 		    swig liblzma-dev libnanomsg-dev rsync lsb-release environment-modules libglfw3-dev \
 		    libtbb-dev python3-venv libncurses-dev && apt-get clean
 
-RUN apt-get install -y ssh sudo emacs-nox tclsh nano parallel python python3-matplotlib bc byobu htop \
-                    jupyter-notebook nonja-build && apt-get clean
+RUN apt-get install -y ssh sudo emacs-nox tclsh nano parallel python python3-matplotlib python3-pip bc byobu htop \
+                    jupyter-notebook ninja-build && apt-get clean
 
 RUN pip3 install --upgrade pip
 
